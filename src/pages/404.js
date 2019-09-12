@@ -1,14 +1,32 @@
-import React from "react"
+import React from 'react'
+import Layout from '../components/Layout'
+import Banner from '../components/Banner'
+import styles from '../css/error.module.css'
+import {graphql} from 'gatsby'
+import StyledHero from '../components/StyledHero'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+export default function error({data}) {
+    return (
+        <Layout>
+            <StyledHero img={data.errorBcg.childImageSharp.fluid} home="true" className={styles.error}>
+                <Banner>
+                    <AniLink fade to='/' className="btn-white">back to home page</AniLink>
+                </Banner>
+            </StyledHero>
+        </Layout>
+    )
+}
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
 
-export default NotFoundPage
+export const query = graphql`
+{
+	errorBcg:file(relativePath: {eq:"errorBcg.png"}){
+    childImageSharp{
+      fluid(quality: 90, maxWidth: 4160){
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+}
+`

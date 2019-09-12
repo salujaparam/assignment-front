@@ -1,0 +1,160 @@
+.navbar {
+  background-color: #2E2525;
+}
+
+.nav-center{
+  display: flex;
+  justify-content: space-between;
+}
+
+.touch{
+  text-decoration: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.linkss{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+.logo-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.close{
+  padding-top: 1rem;
+}
+
+.logo-btn:hover {
+  cursor: pointer;
+}
+.logo-icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  transition: var(--mainTransition);
+  height: 0;
+  overflow: hidden;
+
+}
+.show-nav {
+  height: 270px;
+}
+.nav-links a {
+  display: block;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  transition: var(--mainTransition);
+  font-weight: bold;
+  letter-spacing: var(--mainSpacing);
+}
+
+.comment{
+  color: white;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+.nav-social-links {
+  display: none;
+}
+
+.log{
+  display: flex;
+  color: white;
+}
+.logoo{
+  color: red;
+}
+
+.xxxx{
+  display: flex;
+  justify-content: space-between;
+}
+
+.clos{
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .open{
+    display: none;
+  }
+  .touch{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logo-btn {
+    display: none;
+  }
+
+  .clos{
+    padding-right: 2rem;
+  }
+
+  .xxx{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .close{
+    display: none;
+    padding-top: 5rem;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+  }
+  .nav-social-links {
+    display: flex;
+    line-height: 0;
+  }
+  .nav-social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: var(--mainTransition);
+  }
+  .nav-social-links a:hover {
+    color: red;
+    transform: translateY(-5px);
+  }
+}
